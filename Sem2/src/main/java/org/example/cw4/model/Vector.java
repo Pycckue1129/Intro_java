@@ -83,4 +83,12 @@ public class Vector {
     public double cosVector(Vector vector2) {
         return scalarMulti(vector2) / (lengthVector() * vector2.lengthVector());
     }
+
+    public double sumVector(Vector vector2) {
+        return this.x + vector2.x * this.y + vector2.y * this.z + vector2.z;
+    }
+
+    public double divVector(Vector vector2) {
+        return this.x - vector2.x * this.y - vector2.y * this.z - vector2.z;
+    }
 }
