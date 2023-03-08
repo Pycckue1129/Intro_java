@@ -14,20 +14,23 @@ public class ex1 {
         for (int i = 0; i < n; i++) {
             System.out.println("Введите число: ");
             int num = sc.nextInt();
-            boolean flag = true;
-            if (num == 1){
-                flag = false;
-            }
-            for (int j = 2; j < num; j++) {
-                if (num % j == 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            if (flag) {
+            if (exam(num)) {
                 sum += num;
             }
         }
         System.out.println("Сумма простых чисел: " + sum);
     }
+
+    public static boolean exam(int num) {
+        if (num == 1) {
+            return false;
+        }
+        for (int j = 2; j < num; j++) {
+            if (num % j == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
+
