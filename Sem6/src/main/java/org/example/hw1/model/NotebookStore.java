@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class NotebookStore {
+
     public List<Notebook> notebooks = new ArrayList<>();
 
     public void addNotebook(Notebook notebook) {
